@@ -8,7 +8,7 @@ function App() {
 
 
   useEffect(() => {
-    axios.get('https://servicodados.ibge.gov.br/api/v1/localidades/estados').then(response => {
+    axios.get('https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome').then(response => {
       setCidades(response.data);
     })
   }, [cidades]);
